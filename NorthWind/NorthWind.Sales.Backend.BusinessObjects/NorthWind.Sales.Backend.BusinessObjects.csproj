@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NorthWind.Sales.Entities\NorthWind.Sales.Entities.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Enums\" />
+    <None Remove="Interfaces\" />
+    <None Remove="POCOEntities\" />
+    <None Remove="ValueObjects\" />
+    <None Remove="Aggregates\" />
+    <None Remove="Interfaces\Common\" />
+    <None Remove="Interfaces\CreateOrder\" />
+    <None Remove="Interfaces\Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enums\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="POCOEntities\" />
+    <Folder Include="ValueObjects\" />
+    <Folder Include="Aggregates\" />
+    <Folder Include="Interfaces\Common\" />
+    <Folder Include="Interfaces\CreateOrder\" />
+    <Folder Include="Interfaces\Repositories\" />
+  </ItemGroup>
+</Project>
