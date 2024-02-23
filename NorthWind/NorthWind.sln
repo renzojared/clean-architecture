@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Sales.Frontend.Io
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Sales.BlazorClient", "NorthWind.Sales.BlazorClient\NorthWind.Sales.BlazorClient.csproj", "{9CB344E2-4FFB-4A61-A003-CFCE1574B732}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Validation.Entities", "NorthWind.Validation.Entities\NorthWind.Validation.Entities.csproj", "{7329B776-EA1E-4160-B549-421BC78BCEDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{9CB344E2-4FFB-4A61-A003-CFCE1574B732}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CB344E2-4FFB-4A61-A003-CFCE1574B732}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9CB344E2-4FFB-4A61-A003-CFCE1574B732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7329B776-EA1E-4160-B549-421BC78BCEDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7329B776-EA1E-4160-B549-421BC78BCEDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7329B776-EA1E-4160-B549-421BC78BCEDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7329B776-EA1E-4160-B549-421BC78BCEDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
