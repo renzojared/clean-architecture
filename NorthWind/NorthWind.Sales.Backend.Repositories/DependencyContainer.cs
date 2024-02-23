@@ -9,5 +9,3 @@ public static class DependencyContainer
         return services;
     }
 }
-
-//TODO: Implement presenter

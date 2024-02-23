@@ -1,0 +1,99 @@
+<EditForm Model="Order" OnValidSubmit="Order.Send">
+    <div class="form-group">
+        <label for="customerId">
+            @CreateOrderMessages.CustomerIdLabel
+        </label>
+        <InputText class="form-control"
+                   id="customerId"
+                   placeholder=@CreateOrderMessages.CustomerIdLabel @bind-Value=Order.CustomerId />
+    </div>
+    <div class="form-group">
+        <label for="shipAddress">
+            @CreateOrderMessages.ShipAddressLabel
+        </label>
+        <InputText class="form-control"
+                   id="shipAddress"
+                   placeholder=@CreateOrderMessages.ShipAddressLabel @bind-Value=Order.ShipAddress />
+    </div>
+    <div class="form-group">
+        <label for="shipCity">
+            @CreateOrderMessages.ShipCityLabel
+        </label>
+        <InputText
+            class="form-control"
+            id="shipCity"
+            placeholder=@CreateOrderMessages.ShipCityLabel @bind-Value=Order.ShipCity />
+    </div>
+    <div class="form-group">
+        <label for="shipCountry">
+            @CreateOrderMessages.ShipCountryLabel
+        </label>
+        <InputText
+            class="form-control"
+            id="shipCountry"
+            placeholder=@CreateOrderMessages.ShipCountryLabel @bind-Value=Order.ShipCountry />
+    </div>
+    <div class="form-group">
+        <label for="shipPostalCode">
+            @CreateOrderMessages.ShipPostalCodeLabel
+        </label>
+        <InputText
+            class="form-control"
+            id="shipPostalCode"
+            placeholder=@CreateOrderMessages.ShipPostalCodeLabel @bind-Value=Order.ShipPostalCode />
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col">
+            @CreateOrderMessages.ProductIdLabel
+        </div>
+        <div class="col">
+            @CreateOrderMessages.UnitPriceLabel
+        </div>
+        <div class="col">
+            @CreateOrderMessages.QuantityLabel
+        </div>
+    </div>
+    @foreach (var item in Order.OrderDetails)
+    {
+        <div class="row">
+            <div class="col">
+                <InputNumber class="form-control"
+                             placeholder="@CreateOrderMessages.ProductIdLabel"
+                             @bind-Value=item.ProductId />
+            </div>
+            <div class="col">
+                <InputNumber class="form-control"
+                             placeholder="@CreateOrderMessages.UnitPriceLabel"
+                             @bind-Value=item.UnitPrice />
+            </div>
+            <div class="col">
+                <InputNumber class="form-control"
+                             placeholder="@CreateOrderMessages.QuantityLabel"
+                             @bind-Value=item.Quantity />
+            </div>
+        </div>
+    }
+    <div class="row p-3">
+        <div class="col">
+            <button type="button"
+                    class="btn btn-primary"
+                    @onclick=Order.AddNewOrderDetailItem>
+                @CreateOrderMessages.AddProductButtonText
+            </button>
+        </div>
+        <div class="col">
+            <button class="btn btn-primary">
+                @CreateOrderMessages.SendButtonText
+            </button>
+        </div>
+    </div>
+</EditForm>
+<hr/>
+
+@if (!string.IsNullOrWhiteSpace(Order.InformationMessage))
+{
+    <div class="alert alert-info">
+        @Order.InformationMessage
+    </div>
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="CustomerIdLabel" xml:space="preserve">
+        <value>Id del cliente</value>
+    </data>
+    <data name="ShipAddressLabel" xml:space="preserve">
+        <value>Dirección</value>
+    </data>
+    <data name="ShipCityLabel" xml:space="preserve">
+        <value>Ciudad</value>
+    </data>
+    <data name="ShipCountryLabel" xml:space="preserve">
+        <value>País</value>
+    </data>
+    <data name="ShipPostalCodeLabel" xml:space="preserve">
+        <value>Código Postal</value>
+    </data>
+    <data name="ProductIdLabel" xml:space="preserve">
+        <value>Id de Producto</value>
+    </data>
+    <data name="UnitPriceLabel" xml:space="preserve">
+        <value>Precio</value>
+    </data>
+    <data name="QuantityLabel" xml:space="preserve">
+        <value>Cantidad</value>
+    </data>
+    <data name="AddProductButtonText" xml:space="preserve">
+        <value>Agregar producto</value>
+    </data>
+    <data name="SendButtonText" xml:space="preserve">
+        <value>Enviar</value>
+    </data>
+    <data name="CreateOrderTemplate" xml:space="preserve">
+        <value>Orden {0} creada</value>
+    </data>
+    <data name="CreateOrderMenuItemTitle" xml:space="preserve">
+        <value>Crear orden</value>
+    </data>
+    <data name="CreateOrderPageTitle" xml:space="preserve">
+        <value>Crear orden de compra</value>
+    </data>
+</root>
