@@ -1,11 +1,14 @@
 ﻿namespace NorthWind.Sales.Backend.UseCases.CreateOrder;
 
-internal class CreateOrderInteractor
-    (ICreateOrderOutputPort outputPort, ICommandsRepository repository) : ICreateOrderInputPort
+internal class CreateOrderInteractor(
+    ICreateOrderOutputPort outputPort,
+    ICommandsRepository repository,
+    IModelValidatorHub<CreateOrderDto> modelValidatorHub) : ICreateOrderInputPort
 {
     public async Task Handle(CreateOrderDto orderDto)
     {
-        //Validaciones aqui
+        await GuardModel.AgainstNotValid(modelValidatorHub, orderDto);
+
         var order = OrderAggregate.From(orderDto);
 
         await repository.CreateOrder(order);

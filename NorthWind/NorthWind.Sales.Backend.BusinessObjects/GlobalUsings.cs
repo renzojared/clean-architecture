@@ -4,3 +4,4 @@ global using NorthWind.Sales.Backend.BusinessObjects.ValueObjects;
 global using NorthWind.Sales.Entities.Dtos.CreateOrder;
 global using NorthWind.Sales.Backend.BusinessObjects.Aggregates;
 global using NorthWind.Sales.Backend.BusinessObjects.Interfaces.Common;
+global using NorthWind.Validation.Entities.Interfaces;

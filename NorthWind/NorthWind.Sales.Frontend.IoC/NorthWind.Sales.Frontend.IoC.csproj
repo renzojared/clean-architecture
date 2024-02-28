@@ -9,6 +9,7 @@
     <ItemGroup>
       <ProjectReference Include="..\NorthWind.Sales.Frontend.Views\NorthWind.Sales.Frontend.Views.csproj" />
       <ProjectReference Include="..\NorthWind.Sales.Frontend.WebApiGateways\NorthWind.Sales.Frontend.WebApiGateways.csproj" />
+      <ProjectReference Include="..\NorthWind.Sales.Validators.Entities\NorthWind.Sales.Validators.Entities.csproj" />
     </ItemGroup>
 
 </Project>

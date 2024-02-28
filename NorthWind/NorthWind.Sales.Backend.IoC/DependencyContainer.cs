@@ -11,7 +11,8 @@ public static class DependencyContainer
             .AddUseCasesServices()
             .AddRepositories()
             .AddDataContexts(configureDbOptions)
-            .AddPresenters();
+            .AddPresenters()
+            .AddValidators();
 
         return services;
     }
