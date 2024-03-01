@@ -23,10 +23,8 @@
     <Folder Include="Enums\" />
     <Folder Include="Interfaces\" />
     <Folder Include="POCOEntities\" />
-    <Folder Include="ValueObjects\" />
     <Folder Include="Aggregates\" />
     <Folder Include="Interfaces\Common\" />
     <Folder Include="Interfaces\CreateOrder\" />
-    <Folder Include="Interfaces\Repositories\" />
   </ItemGroup>
 </Project>
