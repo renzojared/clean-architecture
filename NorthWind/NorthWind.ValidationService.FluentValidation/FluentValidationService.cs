@@ -1,24 +1,26 @@
-using System.Linq.Expressions;
-using NorthWind.Validation.Entities.Interfaces;
-using NorthWind.Validation.Entities.ValueObjects;
-
 namespace NorthWind.ValidationService.FluentValidation;
 
 public class FluentValidationService<T> : IValidationService<T>
 {
-    //TODO: Implement
+    internal readonly AbstractValidatorImplementation<T> Wrapper
+        = new AbstractValidatorImplementation<T>();
+
     public IValidationRules<T, TProperty> AddRuleFor<TProperty>(Expression<Func<T, TProperty>> expression)
-    {
-        throw new NotImplementedException();
-    }
+        => new ValidationRules<T, TProperty>(Wrapper.RuleFor(expression));
 
-    public ICollectionValidationRules<T, TProperty> AddRuleForEach<TProperty>(Expression<Func<T, IEnumerable<TProperty>>> expression)
-    {
-        throw new NotImplementedException();
-    }
+    public ICollectionValidationRules<T, TProperty> AddRuleForEach<TProperty>(
+        Expression<Func<T, IEnumerable<TProperty>>> expression)
+        => new CollectionValidationRules<T, TProperty>(Wrapper.RuleForEach(expression));
 
-    public Task<IEnumerable<ValidationError>> Validate(T model)
+    public async Task<IEnumerable<ValidationError>> Validate(T model)
     {
-        throw new NotImplementedException();
+        var result = await Wrapper.ValidateAsync(model);
+        IEnumerable<ValidationError> errors = default;
+
+        if (!result.IsValid)
+            errors = result.Errors
+                .Select(s => new ValidationError(s.PropertyName, s.ErrorMessage));
+
+        return errors;
     }
 }

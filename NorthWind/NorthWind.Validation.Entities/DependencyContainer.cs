@@ -4,7 +4,7 @@ public static class DependencyContainer
 {
     public static IServiceCollection AddDefaultModelValidatorHub(this IServiceCollection services)
     {
-        services.TryAddScoped(typeof(IModelValidator<>), typeof(ModelValidatorHub<>));
+        services.TryAddScoped(typeof(IModelValidatorHub<>), typeof(ModelValidatorHub<>));
         return services;
     }
 

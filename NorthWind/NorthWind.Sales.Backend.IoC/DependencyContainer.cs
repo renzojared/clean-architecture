@@ -12,7 +12,8 @@ public static class DependencyContainer
             .AddRepositories()
             .AddDataContexts(configureDbOptions)
             .AddPresenters()
-            .AddValidators();
+            .AddValidators()
+            .AddValidationService();
 
         return services;
     }
