@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NorthWind.Sales.Backend.DataContexts.EFCore.DataContexts;
 
@@ -11,9 +12,11 @@ using NorthWind.Sales.Backend.DataContexts.EFCore.DataContexts;
 namespace NorthWind.Sales.Backend.DataContexts.EFCore.Migrations
 {
     [DbContext(typeof(NorthWindContext))]
-    partial class NorthWindContextModelSnapshot : ModelSnapshot
+    [Migration("20240306013022_AddProductAndCustomer")]
+    partial class AddProductAndCustomer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

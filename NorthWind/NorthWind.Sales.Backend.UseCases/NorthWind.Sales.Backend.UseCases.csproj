@@ -15,6 +15,16 @@
     <None Remove="CreateOrder\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CreateOrder\" />
+    <EmbeddedResource Update="Resources\CreateOrderMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CreateOrderMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\CreateOrderMessages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>CreateOrderMessages.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>

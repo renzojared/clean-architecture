@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="CustomerIdNotFoundError" xml:space="preserve">
+        <value>El identificador de cliente proporcionado no existe.</value>
+    </data>
+    <data name="CustomerWithBalanceErrorTemplate" xml:space="preserve">
+        <value>El ciente {0} tiene un adeudo pendiente de {1}.</value>
+    </data>
+    <data name="ProductIdNotFoundErrorTemplate" xml:space="preserve">
+        <value>El producto {0} no existe.</value>
+    </data>
+    <data name="UnitsInStockLessThanQuantityErrorTemplate" xml:space="preserve">
+        <value>Cantidad {0} de {1} no suficiente para producto {2}.</value>
+    </data>
+</root>

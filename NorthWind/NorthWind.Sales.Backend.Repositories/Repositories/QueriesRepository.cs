@@ -6,11 +6,11 @@ internal class QueriesRepository(INorthWindSalesQueriesDataContext context) : IQ
 {
     public async Task<IEnumerable<ProductUnitsInStock>> GetProductsUnitsInStock(IEnumerable<int> productId)
     {
-        //TODO: review
-        var queryable = context.Products.Where(s => productId.Contains(s.Id));
-        var products = await context.ToListAsync(queryable);
+        var queryable = context.Products
+            .Where(s => productId.Contains(s.Id))
+            .Select(s => new ProductUnitsInStock(s.Id, s.UnitsInStock));
 
-        return products.Select(s => new ProductUnitsInStock(s.Id, s.UnitsInStock));
+        return await context.ToListAsync(queryable);
     }
 
     public async Task<decimal?> GetCustomerCurrentBalance(string customerId)

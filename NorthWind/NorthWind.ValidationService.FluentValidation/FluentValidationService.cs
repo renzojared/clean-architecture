@@ -2,8 +2,7 @@ namespace NorthWind.ValidationService.FluentValidation;
 
 public class FluentValidationService<T> : IValidationService<T>
 {
-    internal readonly AbstractValidatorImplementation<T> Wrapper
-        = new AbstractValidatorImplementation<T>();
+    internal readonly AbstractValidatorImplementation<T> Wrapper = new();
 
     public IValidationRules<T, TProperty> AddRuleFor<TProperty>(Expression<Func<T, TProperty>> expression)
         => new ValidationRules<T, TProperty>(Wrapper.RuleFor(expression));

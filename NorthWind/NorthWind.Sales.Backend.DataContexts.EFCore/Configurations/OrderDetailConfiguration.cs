@@ -1,6 +1,6 @@
 namespace NorthWind.Sales.Backend.DataContexts.EFCore.Configurations;
 
-public class OrderDetailConfiguration : IEntityTypeConfiguration<OrderDetail>
+internal class OrderDetailConfiguration : IEntityTypeConfiguration<OrderDetail>
 {
     public void Configure(EntityTypeBuilder<OrderDetail> builder)
     {
@@ -8,5 +8,9 @@ public class OrderDetailConfiguration : IEntityTypeConfiguration<OrderDetail>
 
         builder.Property(s => s.UnitPrice)
             .HasPrecision(8, 2);
+
+        builder.HasOne<Product>()
+            .WithMany()
+            .HasForeignKey(s => s.ProductId);
     }
 }

@@ -7,3 +7,4 @@ global using Microsoft.Extensions.Options;
 global using NorthWind.Sales.Backend.DataContexts.EFCore.Options;
 global using NorthWind.Sales.Backend.Repositories.Interfaces;
 global using NorthWind.Sales.Backend.DataContexts.EFCore.Services;
+global using NorthWind.Sales.Backend.DataContexts.EFCore.DataContexts;
