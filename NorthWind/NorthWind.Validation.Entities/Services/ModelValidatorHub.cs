@@ -1,5 +1,3 @@
-using NorthWind.Validation.Entities.Interfaces;
-
 namespace NorthWind.Validation.Entities.Services;
 
 public class ModelValidatorHub<ModelType>(IEnumerable<IModelValidator<ModelType>> validators) : IModelValidatorHub<ModelType>

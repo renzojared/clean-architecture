@@ -1,13 +1,14 @@
 namespace NorthWind.Sales.Frontend.Views.ViewModels.CreateOrder;
 
-public class CreateOrderViewModel(ICreateOrderGateway gateway)
+public class CreateOrderViewModel(ICreateOrderGateway gateway, IModelValidatorHub<CreateOrderViewModel> validator)
 {
+    public IModelValidatorHub<CreateOrderViewModel> Validator => validator;
     public string CustomerId { get; set; }
     public string ShipAddress { get; set; }
     public string ShipCity { get; set; }
     public string ShipCountry { get; set; }
     public string ShipPostalCode { get; set; }
-    public List<CreateOrderDetailViewModel> OrderDetails { get; set; } = [];
+    public ICollection<CreateOrderDetailViewModel> OrderDetails { get; set; } = [];
 
     public string InformationMessage { get; private set; }
 
@@ -18,7 +19,7 @@ public class CreateOrderViewModel(ICreateOrderGateway gateway)
     {
         InformationMessage = "";
 
-        var orderId = await gateway.CreateOrderAsyc((CreateOrderDto)this);
+        var orderId = await gateway.CreateOrderAsync((CreateOrderDto)this);
         
         InformationMessage = string.Format(CreateOrderMessages.CreateOrderTemplate, orderId);
     }

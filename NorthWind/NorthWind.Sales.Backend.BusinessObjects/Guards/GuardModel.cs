@@ -6,7 +6,7 @@ public static class GuardModel
     {
         if (!await modelValidatorHub.Validate(model))
         {
-            string errors = string
+            var errors = string
                 .Join(" ", modelValidatorHub.Errors
                     .Select(s => $"{s.PropertyName}: {s.Message}"));
             throw new Exception(errors);

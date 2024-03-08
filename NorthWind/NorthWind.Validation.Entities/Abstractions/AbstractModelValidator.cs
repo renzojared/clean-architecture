@@ -19,5 +19,5 @@ public abstract class AbstractModelValidator<T>(
     protected ICollectionValidationRules<T, TProperty> AddRuleForEach<TProperty>(
         Expression<Func<T, IEnumerable<TProperty>>> expression) => validationService.AddRuleForEach<TProperty>(expression);
 
-    public IValidationService<T> ValidatiorService => validationService;
+    public IValidationService<T> ValidatorService => validationService;
 }

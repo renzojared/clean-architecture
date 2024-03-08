@@ -28,7 +28,7 @@
         <value>Dene especificarse el precio del producto.</value>
     </data>
     <data name="CustomerIdRequiredLength" xml:space="preserve">
-        <value>La longitud del identificar debe ser 5.</value>
+        <value>La longitud del identificador debe ser 5.</value>
     </data>
     <data name="ShipAddressRequired" xml:space="preserve">
         <value>Debe proporcionar la dirección de envio.</value>

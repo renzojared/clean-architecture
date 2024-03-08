@@ -1,5 +1,3 @@
-using NorthWind.Validation.Entities.Interfaces;
-
 namespace NorthWind.Validation.Entities.Abstractions;
 
 public abstract class AbstractViewModelValidator<DtoType, ViewModelType>(
@@ -14,7 +12,7 @@ public abstract class AbstractViewModelValidator<DtoType, ViewModelType>(
     {
         DtoType dtoModel = default;
 
-        var explicitMethod = typeof(ViewModelType).GetMethod("op_Exclicit");
+        var explicitMethod = typeof(ViewModelType).GetMethod("op_Explicit");
         if (explicitMethod != null)
             dtoModel = (DtoType)explicitMethod.Invoke(viewModel, new object[] { viewModel });
         else

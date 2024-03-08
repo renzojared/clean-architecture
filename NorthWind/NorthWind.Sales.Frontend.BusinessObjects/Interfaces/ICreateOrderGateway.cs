@@ -4,5 +4,5 @@ namespace NorthWind.Sales.Frontend.BusinessObjects.Interfaces;
 
 public interface ICreateOrderGateway
 {
-    Task<int> CreateOrderAsyc(CreateOrderDto orderDto);
+    Task<int> CreateOrderAsync(CreateOrderDto orderDto);
 }

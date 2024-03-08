@@ -41,7 +41,7 @@ public class CreateOrderProductValidator(IQueriesRepository repository) : IModel
                         productFound.UnitsInStock, item.UnitsInStock, item.ProductId)));
             }
         }
-        
+
         return !ErrorsField.Any();
     }
 

@@ -8,7 +8,7 @@ internal class CollectionValidationRules<T, TProperty>(
     public ICollectionValidationRules<T, TProperty> SetValidator(IModelValidator<TProperty> validator)
     {
         var modelValidator = validator as AbstractModelValidator<TProperty>;
-        var validationService = modelValidator.ValidatiorService as FluentValidationService<TProperty>;
+        var validationService = modelValidator.ValidatorService as FluentValidationService<TProperty>;
         ruleBuilderInitialCollection
             .SetValidator(validationService.Wrapper);
         return this;

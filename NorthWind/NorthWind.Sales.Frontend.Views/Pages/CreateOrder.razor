@@ -2,13 +2,13 @@
 
 <PageTitle>@CreateOrderMessages.CreateOrderPageTitle</PageTitle>
 
-<ErrorBoundary>
+<ErrorBoundary @ref=ErrorBoundaryRef>
     <ChildContent>
         <CreateOrderComponent Order="ViewModel"/>
     </ChildContent>
     <ErrorContent>
         <ExceptionDisplay Exception="context"/>
-        <button class="btn btn-danger" @onclick="Recover">
+        <button class="btn btn-danger" @onclick=Recover>
             @CommonMessages.OK
         </button>
     </ErrorContent>
