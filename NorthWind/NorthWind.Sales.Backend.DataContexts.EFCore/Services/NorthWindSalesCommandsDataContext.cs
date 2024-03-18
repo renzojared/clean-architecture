@@ -1,4 +1,4 @@
-using NorthWind.Sales.Backend.DataContexts.EFCore.DataContexts;
+using NorthWind.Sales.Backend.DataContexts.EFCore.Guards;
 
 namespace NorthWind.Sales.Backend.DataContexts.EFCore.Services;
 
@@ -12,5 +12,5 @@ internal class NorthWindSalesCommandsDataContext(IOptions<DBOptions> dbOptions)
         => await AddRangeAsync(orderDetails);
 
     public async Task SaveChangesAsync()
-        => await base.SaveChangesAsync();
+        => await GuardDbContext.AgainstSaveChangesErrorAsync(this);
 }
