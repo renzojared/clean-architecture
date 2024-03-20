@@ -1,6 +1,9 @@
 <EditForm Model="Order" OnValidSubmit="Order.Send">
 
-    <ModelValidator Validator="Order.Validator"/>
+    <ModelValidator
+        Validator="Order.Validator"
+        @ref="Order.ModelValidatorComponentReference"/>
+
     <ValidationSummary/>
 
     <div class="form-group">
@@ -64,9 +67,9 @@
     {
         <div class="row">
             <div class="col">
-               <InputNumber class="form-control"
-               placeholder="@CreateOrderMessages.ProductIdLabel"
-               @bind-Value=Item.ProductId/>
+                <InputNumber class="form-control"
+                             placeholder="@CreateOrderMessages.ProductIdLabel"
+                             @bind-Value=Item.ProductId/>
                 <ValidationMessage For="() => Item.ProductId" />
             </div>
             <div class="col">
