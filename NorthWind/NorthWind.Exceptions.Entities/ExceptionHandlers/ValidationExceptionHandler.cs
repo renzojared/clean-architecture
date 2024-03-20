@@ -1,20 +1,30 @@
 namespace NorthWind.Exceptions.Entities.ExceptionHandlers;
 
-internal class ValidationExceptionHandler : IExceptionHandler<ValidationException>
+internal class ValidationExceptionHandler : IExceptionHandler
 {
-    public ProblemDetails Handle(ValidationException exception)
+    public async ValueTask<bool> TryHandleAsync(HttpContext httpContext, Exception exception,
+        CancellationToken cancellationToken)
     {
-        var details = new ProblemDetails
+        var handled = false;
+
+        if (exception is ValidationException ex)
         {
-            Status = StatusCodes.Status400BadRequest,
-            Type = "https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1",
-            Title = ExceptionMessage.ValidationExceptionTitle,
-            Detail = ExceptionMessage.ValidationExceptionDetail,
-            Instance = $"{nameof(ProblemDetails)}/{nameof(ValidationException)}",
-        };
+            var details = new ProblemDetails
+            {
+                Status = StatusCodes.Status400BadRequest,
+                Type = "https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1",
+                Title = ExceptionMessage.ValidationExceptionTitle,
+                Detail = ExceptionMessage.ValidationExceptionDetail,
+                Instance = $"{nameof(ProblemDetails)}/{nameof(ValidationException)}",
+            };
 
-        details.Extensions.Add("errors", exception.Errors);
+            details.Extensions.Add("errors", ex.Errors);
 
-        return details;
+            await httpContext.WriteProblemDetailsAsync(details);
+
+            handled = true;
+        }
+
+        return handled;
     }
 }
