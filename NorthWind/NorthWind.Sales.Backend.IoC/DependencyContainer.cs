@@ -16,7 +16,8 @@ public static class DependencyContainer
             .AddValidationService()
             .AddValidationExceptionHandler()
             .AddUpdateExceptionHandler()
-            .AddUnhandledExceptionHandler();
+            .AddUnhandledExceptionHandler()
+            .AddEventServices();
 
         return services;
     }
