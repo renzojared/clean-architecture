@@ -75,6 +75,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataContexts", "DataContext
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Events", "NorthWind.Events\NorthWind.Events.csproj", "{6622CE8F-93D7-490C-A35C-E0779A2D3E0C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EmailGateways", "EmailGateways", "{F0574BAF-C4B0-4A3E-AF5B-5B18616B74A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Sales.Backend.SmtpGateways", "NorthWind.Sales.Backend.SmtpGateways\NorthWind.Sales.Backend.SmtpGateways.csproj", "{6D43FBBB-6CF4-4DD3-97F0-3A2E47B1893D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +169,10 @@ Global
 		{6622CE8F-93D7-490C-A35C-E0779A2D3E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6622CE8F-93D7-490C-A35C-E0779A2D3E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6622CE8F-93D7-490C-A35C-E0779A2D3E0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D43FBBB-6CF4-4DD3-97F0-3A2E47B1893D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D43FBBB-6CF4-4DD3-97F0-3A2E47B1893D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D43FBBB-6CF4-4DD3-97F0-3A2E47B1893D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D43FBBB-6CF4-4DD3-97F0-3A2E47B1893D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -205,5 +213,7 @@ Global
 		{0928F64F-2F79-4082-9282-7B2FD5F125FE} = {93BC7F18-F9C8-4DF9-9516-A23A605C7D63}
 		{4CFDC479-F8F5-42B3-8F19-14965DC14465} = {0928F64F-2F79-4082-9282-7B2FD5F125FE}
 		{6622CE8F-93D7-490C-A35C-E0779A2D3E0C} = {E73D1834-6B9B-4999-9235-4467C9B21B16}
+		{F0574BAF-C4B0-4A3E-AF5B-5B18616B74A6} = {A2E5FC6F-0D51-48A5-98A6-EB93CE5F613B}
+		{6D43FBBB-6CF4-4DD3-97F0-3A2E47B1893D} = {F0574BAF-C4B0-4A3E-AF5B-5B18616B74A6}
 	EndGlobalSection
 EndGlobal

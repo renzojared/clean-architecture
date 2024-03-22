@@ -30,4 +30,10 @@
     <data name="UnitsInStockLessThanQuantityErrorTemplate" xml:space="preserve">
         <value>Cantidad {0} de {1} no suficiente para producto {2}.</value>
     </data>
+    <data name="SendEmailSubject" xml:space="preserve">
+        <value>Orden especial creada</value>
+    </data>
+    <data name="SendEmailBodyTemplate" xml:space="preserve">
+        <value>Se ha creado la orden {0} con {1} productos.</value>
+    </data>
 </root>

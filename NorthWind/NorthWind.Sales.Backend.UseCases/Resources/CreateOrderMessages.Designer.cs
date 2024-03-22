@@ -68,5 +68,17 @@ namespace NorthWind.Sales.Backend.UseCases.Resources {
                 return ResourceManager.GetString("UnitsInStockLessThanQuantityErrorTemplate", resourceCulture);
             }
         }
+        
+        internal static string SendEmailSubject {
+            get {
+                return ResourceManager.GetString("SendEmailSubject", resourceCulture);
+            }
+        }
+        
+        internal static string SendEmailBodyTemplate {
+            get {
+                return ResourceManager.GetString("SendEmailBodyTemplate", resourceCulture);
+            }
+        }
     }
 }

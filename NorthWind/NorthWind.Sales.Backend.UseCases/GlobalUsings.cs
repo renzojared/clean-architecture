@@ -9,3 +9,4 @@ global using NorthWind.Sales.Backend.UseCases.Resources;
 global using NorthWind.Validation.Entities.Enums;
 global using NorthWind.Validation.Entities.ValueObjects;
 global using NorthWind.Sales.Backend.BusinessObjects.ValueObjects;
+global using NorthWind.Events.Interfaces;

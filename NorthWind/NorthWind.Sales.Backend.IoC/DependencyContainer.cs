@@ -1,11 +1,14 @@
 using NorthWind.Sales.Backend.DataContexts.EFCore.Options;
+using NorthWind.Sales.Backend.SmtpGateways.Options;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
 public static class DependencyContainer
 {
     public static IServiceCollection AddNorthWindSalesServices
-        (this IServiceCollection services, Action<DBOptions> configureDbOptions)
+        (this IServiceCollection services,
+            Action<DBOptions> configureDbOptions,
+            Action<SmtpOptions> configureSmtpOptions)
     {
         services
             .AddUseCasesServices()
@@ -17,7 +20,8 @@ public static class DependencyContainer
             .AddValidationExceptionHandler()
             .AddUpdateExceptionHandler()
             .AddUnhandledExceptionHandler()
-            .AddEventServices();
+            .AddEventServices()
+            .AddMailServices(configureSmtpOptions);
 
         return services;
     }
