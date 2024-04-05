@@ -85,6 +85,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Entities", "North
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Transactions.Entities", "NorthWind.Transactions.Entities\NorthWind.Transactions.Entities.csproj", "{C9DD2DB9-042D-4BE7-8488-A7BD0178199B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.UserServices", "NorthWind.UserServices\NorthWind.UserServices.csproj", "{6CB8F094-2E45-4BBE-95D7-8003A2F9ABE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -191,6 +193,10 @@ Global
 		{C9DD2DB9-042D-4BE7-8488-A7BD0178199B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9DD2DB9-042D-4BE7-8488-A7BD0178199B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9DD2DB9-042D-4BE7-8488-A7BD0178199B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CB8F094-2E45-4BBE-95D7-8003A2F9ABE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CB8F094-2E45-4BBE-95D7-8003A2F9ABE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CB8F094-2E45-4BBE-95D7-8003A2F9ABE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CB8F094-2E45-4BBE-95D7-8003A2F9ABE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -236,5 +242,6 @@ Global
 		{17740CD9-54C1-454F-8294-A5E58E8C22D8} = {E73D1834-6B9B-4999-9235-4467C9B21B16}
 		{452F9E66-3DBB-4772-972E-DF8A3BFE90F4} = {E73D1834-6B9B-4999-9235-4467C9B21B16}
 		{C9DD2DB9-042D-4BE7-8488-A7BD0178199B} = {E73D1834-6B9B-4999-9235-4467C9B21B16}
+		{6CB8F094-2E45-4BBE-95D7-8003A2F9ABE0} = {E73D1834-6B9B-4999-9235-4467C9B21B16}
 	EndGlobalSection
 EndGlobal

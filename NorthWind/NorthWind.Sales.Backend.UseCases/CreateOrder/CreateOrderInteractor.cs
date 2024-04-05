@@ -9,8 +9,31 @@ internal class CreateOrderInteractor(
     ICommandsRepository repository,
     IModelValidatorHub<CreateOrderDto> modelValidatorHub,
     IDomainEventHub<SpecialOrderCreatedEvent> domainEventHub,
-    IDomainLogger domainLogger) : ICreateOrderInputPort
+    IDomainLogger domainLogger,
+    IUserService userService) : ICreateOrderInputPort
 {
+    public async Task Handle(CreateOrderDto orderDto)
+    {
+        if (!userService.IsAuthenticated)
+            throw new UnauthorizedAccessException();
+
+        await GuardModel.AgainstNotValid(modelValidatorHub, orderDto);
+        await domainLogger.LogInformation(new DomainLog(CreateOrderMessages.StartingPurchaseOrderCreation,
+            userService.UserName));
+        var order = OrderAggregate.From(orderDto);
+
+        await repository.CreateOrder(order);
+        await repository.SaveChanges();
+
+        await domainLogger.LogInformation(new DomainLog(
+            string.Format(CreateOrderMessages.PurchaseOrderCreatedTemplate, order.Id), userService.UserName));
+
+        await outputPort.Handle(order);
+
+        if (new SpecialOrderSpecification().IsSatisfiedBy(order))
+            await domainEventHub.Raise(new SpecialOrderCreatedEvent(order.Id, order.OrderDetails.Count));
+    }
+
     private Task WindowsHandle(CreateOrderDto orderDto)
     {
         /*
@@ -44,23 +67,4 @@ internal class CreateOrderInteractor(
         }*/
         return Task.CompletedTask;
     }
-
-    public async Task Handle(CreateOrderDto orderDto)
-    {
-        await GuardModel.AgainstNotValid(modelValidatorHub, orderDto);
-        await domainLogger.LogInformation(new DomainLog(CreateOrderMessages.StartingPurchaseOrderCreation));
-        var order = OrderAggregate.From(orderDto);
-
-        await repository.CreateOrder(order);
-        await repository.SaveChanges();
-
-        await domainLogger.LogInformation(new DomainLog(
-            string.Format(CreateOrderMessages.PurchaseOrderCreatedTemplate, order.Id)));
-
-        await outputPort.Handle(order);
-
-        if (new SpecialOrderSpecification().IsSatisfiedBy(order))
-            await domainEventHub.Raise(new SpecialOrderCreatedEvent(order.Id, order.OrderDetails.Count));
-    }
 }
-
