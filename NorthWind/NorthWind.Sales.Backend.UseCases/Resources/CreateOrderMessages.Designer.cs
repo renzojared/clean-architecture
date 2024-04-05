@@ -80,5 +80,23 @@ namespace NorthWind.Sales.Backend.UseCases.Resources {
                 return ResourceManager.GetString("SendEmailBodyTemplate", resourceCulture);
             }
         }
+        
+        internal static string StartingPurchaseOrderCreation {
+            get {
+                return ResourceManager.GetString("StartingPurchaseOrderCreation", resourceCulture);
+            }
+        }
+        
+        internal static string PurchaseOrderCreatedTemplate {
+            get {
+                return ResourceManager.GetString("PurchaseOrderCreatedTemplate", resourceCulture);
+            }
+        }
+        
+        internal static string OrderCreationCancelledTemplate {
+            get {
+                return ResourceManager.GetString("OrderCreationCancelledTemplate", resourceCulture);
+            }
+        }
     }
 }

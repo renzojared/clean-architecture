@@ -6,9 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NorthWind.DomainLogs.Entities\NorthWind.DomainLogs.Entities.csproj" />
+    <ProjectReference Include="..\NorthWind.Entities\NorthWind.Entities.csproj" />
     <ProjectReference Include="..\NorthWind.Events\NorthWind.Events.csproj" />
     <ProjectReference Include="..\NorthWind.Exceptions.Entities\NorthWind.Exceptions.Entities.csproj" />
     <ProjectReference Include="..\NorthWind.Sales.Entities\NorthWind.Sales.Entities.csproj" />
+    <ProjectReference Include="..\NorthWind.Transactions.Entities\NorthWind.Transactions.Entities.csproj" />
     <ProjectReference Include="..\NorthWind.Validation.Entities\NorthWind.Validation.Entities.csproj" />
   </ItemGroup>
   <ItemGroup>

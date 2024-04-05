@@ -1,5 +1,3 @@
-using NorthWind.Sales.Backend.SmtpGateways;
-
 namespace Microsoft.Extensions.DependencyInjection;
 
 public static class DependencyContainer

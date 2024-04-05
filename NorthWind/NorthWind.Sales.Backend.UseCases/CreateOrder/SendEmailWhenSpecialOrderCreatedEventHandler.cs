@@ -1,5 +1,3 @@
-using NorthWind.Sales.Backend.BusinessObjects.Interfaces.Common;
-
 namespace NorthWind.Sales.Backend.UseCases.CreateOrder;
 
 public class SendEmailWhenSpecialOrderCreatedEventHandler(IMailService mailService)

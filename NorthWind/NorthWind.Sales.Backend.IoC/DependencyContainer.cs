@@ -21,7 +21,9 @@ public static class DependencyContainer
             .AddUpdateExceptionHandler()
             .AddUnhandledExceptionHandler()
             .AddEventServices()
-            .AddMailServices(configureSmtpOptions);
+            .AddMailServices(configureSmtpOptions)
+            .AddDomainLogsServices()
+            .AddWindowsTransactionServices();
 
         return services;
     }

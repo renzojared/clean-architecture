@@ -22,6 +22,7 @@ internal class MailService(IOptions<SmtpOptions> options, ILogger<MailService> l
         catch (Exception ex)
         {
             logger.LogError(ex, ex.Message);
+            throw;
         }
     }
 }

@@ -79,6 +79,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EmailGateways", "EmailGatew
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Sales.Backend.SmtpGateways", "NorthWind.Sales.Backend.SmtpGateways\NorthWind.Sales.Backend.SmtpGateways.csproj", "{6D43FBBB-6CF4-4DD3-97F0-3A2E47B1893D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.DomainLogs.Entities", "NorthWind.DomainLogs.Entities\NorthWind.DomainLogs.Entities.csproj", "{17740CD9-54C1-454F-8294-A5E58E8C22D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Entities", "NorthWind.Entities\NorthWind.Entities.csproj", "{452F9E66-3DBB-4772-972E-DF8A3BFE90F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthWind.Transactions.Entities", "NorthWind.Transactions.Entities\NorthWind.Transactions.Entities.csproj", "{C9DD2DB9-042D-4BE7-8488-A7BD0178199B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -173,6 +179,18 @@ Global
 		{6D43FBBB-6CF4-4DD3-97F0-3A2E47B1893D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D43FBBB-6CF4-4DD3-97F0-3A2E47B1893D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D43FBBB-6CF4-4DD3-97F0-3A2E47B1893D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17740CD9-54C1-454F-8294-A5E58E8C22D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17740CD9-54C1-454F-8294-A5E58E8C22D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17740CD9-54C1-454F-8294-A5E58E8C22D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17740CD9-54C1-454F-8294-A5E58E8C22D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{452F9E66-3DBB-4772-972E-DF8A3BFE90F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{452F9E66-3DBB-4772-972E-DF8A3BFE90F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{452F9E66-3DBB-4772-972E-DF8A3BFE90F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{452F9E66-3DBB-4772-972E-DF8A3BFE90F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9DD2DB9-042D-4BE7-8488-A7BD0178199B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9DD2DB9-042D-4BE7-8488-A7BD0178199B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9DD2DB9-042D-4BE7-8488-A7BD0178199B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9DD2DB9-042D-4BE7-8488-A7BD0178199B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -215,5 +233,8 @@ Global
 		{6622CE8F-93D7-490C-A35C-E0779A2D3E0C} = {E73D1834-6B9B-4999-9235-4467C9B21B16}
 		{F0574BAF-C4B0-4A3E-AF5B-5B18616B74A6} = {A2E5FC6F-0D51-48A5-98A6-EB93CE5F613B}
 		{6D43FBBB-6CF4-4DD3-97F0-3A2E47B1893D} = {F0574BAF-C4B0-4A3E-AF5B-5B18616B74A6}
+		{17740CD9-54C1-454F-8294-A5E58E8C22D8} = {E73D1834-6B9B-4999-9235-4467C9B21B16}
+		{452F9E66-3DBB-4772-972E-DF8A3BFE90F4} = {E73D1834-6B9B-4999-9235-4467C9B21B16}
+		{C9DD2DB9-042D-4BE7-8488-A7BD0178199B} = {E73D1834-6B9B-4999-9235-4467C9B21B16}
 	EndGlobalSection
 EndGlobal

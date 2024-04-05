@@ -1,4 +1,4 @@
-namespace NorthWind.Sales.Backend.BusinessObjects.Interfaces.Common;
+namespace NorthWind.Entities.Interfaces;
 
 public interface IMailService
 {

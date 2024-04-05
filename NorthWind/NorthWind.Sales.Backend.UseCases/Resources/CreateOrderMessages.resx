@@ -36,4 +36,13 @@
     <data name="SendEmailBodyTemplate" xml:space="preserve">
         <value>Se ha creado la orden {0} con {1} productos.</value>
     </data>
+    <data name="StartingPurchaseOrderCreation" xml:space="preserve">
+        <value>Inicio de creación de orden de compra.</value>
+    </data>
+    <data name="PurchaseOrderCreatedTemplate" xml:space="preserve">
+        <value>Orden de compra {0} creada.</value>
+    </data>
+    <data name="OrderCreationCancelledTemplate" xml:space="preserve">
+        <value>Creación de orden {0} cancelada.</value>
+    </data>
 </root>

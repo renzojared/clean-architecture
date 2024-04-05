@@ -1,4 +1,6 @@
-﻿namespace Microsoft.Extensions.DependencyInjection;
+﻿using NorthWind.DomainLogs.Entities.Interfaces;
+
+namespace Microsoft.Extensions.DependencyInjection;
 
 public static class DependencyContainer
 {
@@ -6,6 +8,7 @@ public static class DependencyContainer
     {
         services.AddScoped<ICommandsRepository, CommandsRepository>();
         services.AddScoped<IQueriesRepository, QueriesRepository>();
+        services.AddScoped<IDomainLogsRepository, DomainLogsRepository>();
 
         return services;
     }

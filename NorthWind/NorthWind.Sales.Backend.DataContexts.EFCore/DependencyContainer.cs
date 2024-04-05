@@ -8,7 +8,7 @@ public static class DependencyContainer
         services.Configure(configureDBOptions);
         services.AddScoped<INorthWindSalesCommandsDataContext, NorthWindSalesCommandsDataContext>();
         services.AddScoped<INorthWindSalesQueriesDataContext, NorthWindSalesQueriesDataContext>();
-
+        services.AddScoped<INorthWindDomainLogsDataContext, NorthWindDomainLogsDataContext>();
         return services;
     }
 }
