@@ -13,6 +13,7 @@ internal class DomainLogsRepository(INorthWindDomainLogsDataContext context) : I
             await context.AddLogAsync(new DomainLog
             {
                 CreatedDate = log.dateTime,
-                Information = log.Information
+                Information = log.Information,
+                UserName = log.UserName
             });
 }

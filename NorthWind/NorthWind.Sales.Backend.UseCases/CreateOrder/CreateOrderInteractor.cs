@@ -1,5 +1,6 @@
 ﻿using NorthWind.DomainLogs.Entities.Interfaces;
 using NorthWind.DomainLogs.Entities.ValueObjects;
+using NorthWind.Entities.Guards;
 using NorthWind.Sales.Backend.BusinessObjects.Specifications;
 
 namespace NorthWind.Sales.Backend.UseCases.CreateOrder;
@@ -14,8 +15,7 @@ internal class CreateOrderInteractor(
 {
     public async Task Handle(CreateOrderDto orderDto)
     {
-        if (!userService.IsAuthenticated)
-            throw new UnauthorizedAccessException();
+        GuardUser.AgainstUnauthenticated(userService);
 
         await GuardModel.AgainstNotValid(modelValidatorHub, orderDto);
         await domainLogger.LogInformation(new DomainLog(CreateOrderMessages.StartingPurchaseOrderCreation,

@@ -36,4 +36,10 @@
     <data name="UnhandledExceptionDetail" xml:space="preserve">
         <value>Consulte al administrador</value>
     </data>
+    <data name="UnauthorizedAccessExceptionDetail" xml:space="preserve">
+        <value>El acceso al recurso solicitado está restringido a usuarios autorizados.</value>
+    </data>
+    <data name="UnauthorizedAccessExceptionTitle" xml:space="preserve">
+        <value>Acceso no autorizado.</value>
+    </data>
 </root>

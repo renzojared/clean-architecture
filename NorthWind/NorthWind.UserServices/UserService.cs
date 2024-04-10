@@ -1,10 +1,19 @@
-﻿using NorthWind.Entities.Interfaces;
+﻿using Microsoft.AspNetCore.Http;
+using NorthWind.Entities.Interfaces;
 
 namespace NorthWind.UserServices;
 
-public class UserService : IUserService
+internal class UserService(IHttpContextAccessor contextAccessor) : IUserService
 {
-    public bool IsAuthenticated { get; }
-    public string UserName { get; }
-    public string FullName { get; }
+    public bool IsAuthenticated
+        => contextAccessor.HttpContext.User.Identity.IsAuthenticated;
+
+    public string UserName
+        => contextAccessor.HttpContext.User.Identity.Name;
+
+    public string FullName
+        => contextAccessor.HttpContext.User.Claims
+            .Where(s => s.Type == "FullName")
+            .Select(s => s.Value)
+            .FirstOrDefault();
 }

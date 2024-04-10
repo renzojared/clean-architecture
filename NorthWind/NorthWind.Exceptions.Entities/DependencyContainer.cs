@@ -16,6 +16,12 @@ public static class DependencyContainer
         return services;
     }
     
+    public static IServiceCollection AddUnauthorizedAccessExceptionHandler(this IServiceCollection services)
+    {
+        services.AddExceptionHandler<UnauthorizedAccessExceptionHandler>();
+        return services;
+    }
+    
     public static IServiceCollection AddUnhandledExceptionHandler(this IServiceCollection services)
     {
         services.AddExceptionHandler<UnhandledExceptionHandler>();

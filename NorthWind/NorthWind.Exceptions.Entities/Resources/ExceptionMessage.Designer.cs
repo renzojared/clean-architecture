@@ -80,5 +80,17 @@ namespace NorthWind.Exceptions.Entities.Resources {
                 return ResourceManager.GetString("UnhandledExceptionDetail", resourceCulture);
             }
         }
+        
+        internal static string UnauthorizedAccessExceptionDetail {
+            get {
+                return ResourceManager.GetString("UnauthorizedAccessExceptionDetail", resourceCulture);
+            }
+        }
+        
+        internal static string UnauthorizedAccessExceptionTitle {
+            get {
+                return ResourceManager.GetString("UnauthorizedAccessExceptionTitle", resourceCulture);
+            }
+        }
     }
 }

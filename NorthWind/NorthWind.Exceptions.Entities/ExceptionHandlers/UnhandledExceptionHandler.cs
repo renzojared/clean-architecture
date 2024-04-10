@@ -1,6 +1,3 @@
-using Microsoft.AspNetCore.Diagnostics;
-using NorthWind.Exceptions.Entities.Extensions;
-
 namespace NorthWind.Exceptions.Entities.ExceptionHandlers;
 
 internal class UnhandledExceptionHandler(ILogger<UnhandledExceptionHandler> logger) : IExceptionHandler

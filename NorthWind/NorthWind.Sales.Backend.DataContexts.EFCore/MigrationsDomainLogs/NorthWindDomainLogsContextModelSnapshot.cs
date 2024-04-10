@@ -36,6 +36,9 @@ namespace NorthWind.Sales.Backend.DataContexts.EFCore.MigrationsDomainLogs
                     b.Property<string>("Information")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("DomainLogs");
