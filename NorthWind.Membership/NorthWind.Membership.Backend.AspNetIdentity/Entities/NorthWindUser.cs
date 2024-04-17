@@ -4,5 +4,6 @@ namespace NorthWind.Membership.Backend.AspNetIdentity.Entities;
 
 public class NorthWindUser : IdentityUser
 {
-    //TODO: Implement
+    public string FirstName { get; set; }
+    public string Lastname { get; set; }
 }

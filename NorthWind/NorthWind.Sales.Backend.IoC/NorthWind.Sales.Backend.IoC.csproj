@@ -18,4 +18,8 @@
       <ProjectReference Include="..\NorthWind.ValidationService.FluentValidation\NorthWind.ValidationService.FluentValidation.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="NorthWind.Membership.Backend.AspNetIdentity" Version="1.0.0" />
+    </ItemGroup>
+
 </Project>

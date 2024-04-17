@@ -1,3 +1,4 @@
+using NorthWind.Membership.Backend.AspNetIdentity.Options;
 using NorthWind.Sales.Backend.DataContexts.EFCore.Options;
 using NorthWind.Sales.Backend.SmtpGateways.Options;
 
@@ -14,7 +15,9 @@ internal static class Startup
             dbOptions
                 => builder.Configuration.GetSection(DBOptions.SectionKey).Bind(dbOptions),
             smtpOptions
-                => builder.Configuration.GetSection(SmtpOptions.SectionKey).Bind(smtpOptions));
+                => builder.Configuration.GetSection(SmtpOptions.SectionKey).Bind(smtpOptions),
+            membershipDbOptions
+                => builder.Configuration.GetSection(MembershipDbOptions.SectionKey).Bind(membershipDbOptions));
 
         builder.Services.AddCors(options => options.AddDefaultPolicy(config =>
         {

@@ -1,3 +1,4 @@
+using NorthWind.Membership.Backend.AspNetIdentity.Options;
 using NorthWind.Sales.Backend.DataContexts.EFCore.Options;
 using NorthWind.Sales.Backend.SmtpGateways.Options;
 
@@ -8,7 +9,8 @@ public static class DependencyContainer
     public static IServiceCollection AddNorthWindSalesServices
         (this IServiceCollection services,
             Action<DBOptions> configureDbOptions,
-            Action<SmtpOptions> configureSmtpOptions)
+            Action<SmtpOptions> configureSmtpOptions,
+            Action<MembershipDbOptions> configureMembershipDbOptions)
     {
         services
             .AddUseCasesServices()
@@ -25,7 +27,9 @@ public static class DependencyContainer
             .AddMailServices(configureSmtpOptions)
             .AddDomainLogsServices()
             .AddWindowsTransactionServices()
-            .AddUserServices();
+            .AddUserServices()
+            .AddMembershipCoreServices()
+            .AddMembershipIdentityService(configureMembershipDbOptions);
 
         return services;
     }

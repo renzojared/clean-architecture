@@ -10,10 +10,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\NorthWind.Membership.Entities\NorthWind.Membership.Entities.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
+      <PackageReference Include="NorthWind.Membership.Entities" Version="1.0.0" />
       <PackageReference Include="NorthWind.Result.Entities" Version="1.0.0" />
     </ItemGroup>
 
