@@ -1,0 +1,67 @@
+@using NorthWind.Membership.Frontend.RazorViews.Resources
+<EditForm Model="ViewModel" OnValidSubmit="ViewModel.Register">
+    <ModelValidator Validator="ViewModel.Validator"
+                    @ref="ViewModel.ModelValidatorComponentReference"/>
+    <ValidationSummary/>
+    
+    <div class="form-group">
+        <label for="FirstName">@UserRegistrationMessages.FirstNameLabel</label>
+        <InputText id="FirstName"
+                   class="form-control"
+                   placeholder="@UserRegistrationMessages.FirstNameLabel"
+                   @bind-Value="ViewModel.FirstName"/>
+        <ValidationMessage For="@(() => ViewModel.FirstName)"/>
+    </div>
+    <div class="form-group">
+        <label for="LastName">@UserRegistrationMessages.LastNameLabel</label>
+        <InputText id="LastName"
+                   class="form-control"
+                   placeholder="@UserRegistrationMessages.LastNameLabel"
+                   @bind-Value="ViewModel.LastName"/>
+        <ValidationMessage For="@(() => ViewModel.LastName)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="Email">@CommonMessages.EmailLabel</label>
+        <InputText id="Email"
+                   class="form-control"
+                   placeholder="@CommonMessages.EmailLabel"
+                   @bind-Value="ViewModel.Email"/>
+        <ValidationMessage For="@(() => ViewModel.Email)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="Password">@CommonMessages.PasswordLabel</label>
+        <InputText id="Password"
+                   class="form-control"
+                   placeholder="@CommonMessages.PasswordLabel"
+                   @bind-Value="ViewModel.Password"
+                   type="password"/>
+        <ValidationMessage For="@(() => ViewModel.Password)"/>
+    </div>
+
+    <div class="form-group">
+        <label for="PasswordConfirmation">@UserRegistrationMessages.PasswordConfirmationLabel</label>
+        <InputText id="PasswordConfirmation"
+                   class="form-control"
+                   placeholder="@UserRegistrationMessages.PasswordConfirmationLabel"
+                   @bind-Value="ViewModel.PasswordConfirmation"
+                   type="password"/>
+        <ValidationMessage For="@(() => ViewModel.PasswordConfirmation)"/>
+    </div>
+    
+    <div class="row p-3">
+        <div class="col">
+            <button class="btn btn-primary">
+                @UserRegistrationMessages.RegisterButtonText
+            </button>
+        </div>
+    </div>
+</EditForm>
+<hr/>
+@if (!string.IsNullOrWhiteSpace(ViewModel.InformationMessage))
+{
+    <div class="alert alert-info">
+        @ViewModel.InformationMessage
+    </div>
+}

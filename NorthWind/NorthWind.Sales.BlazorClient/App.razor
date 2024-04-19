@@ -1,4 +1,5 @@
-﻿<Router AppAssembly="@typeof(App).Assembly" AdditionalAssemblies="AdditionalAssemblies">
+﻿@using NorthWind.Membership.Frontend.RazorViews.Extensions
+<Router AppAssembly="@typeof(App).Assembly" AdditionalAssemblies="AdditionalAssemblies">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
         <FocusOnNavigate RouteData="@routeData" Selector="h1"/>
@@ -15,6 +16,7 @@
     Assembly[] AdditionalAssemblies =>
         new Assembly[]
         {
-            typeof(NorthWind.Sales.Frontend.Views.Pages.CreateOrder).Assembly
+            typeof(NorthWind.Sales.Frontend.Views.Pages.CreateOrder).Assembly,
+            MembershipPages.Assembly
         };
 }
