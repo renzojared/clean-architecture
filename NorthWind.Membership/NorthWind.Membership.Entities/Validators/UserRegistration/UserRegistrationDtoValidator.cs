@@ -1,8 +1,5 @@
 using NorthWind.Membership.Entities.DTOs.UserRegistration;
 using NorthWind.Membership.Entities.Resources;
-using NorthWind.Validation.Entities.Abstractions;
-using NorthWind.Validation.Entities.Enums;
-using NorthWind.Validation.Entities.Interfaces;
 
 namespace NorthWind.Membership.Entities.Validators.UserRegistration;
 

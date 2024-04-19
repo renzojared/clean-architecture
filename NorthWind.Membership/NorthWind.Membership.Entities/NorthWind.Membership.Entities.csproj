@@ -11,6 +11,10 @@
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>UserRegistrationMessages.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="Resources\UserLoginMessages.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>UserLoginMessages.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
@@ -18,6 +22,11 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>UserRegistrationMessages.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\UserLoginMessages.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>UserLoginMessages.resx</DependentUpon>
       </Compile>
     </ItemGroup>
 
