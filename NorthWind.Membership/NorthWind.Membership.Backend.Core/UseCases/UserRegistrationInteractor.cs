@@ -1,9 +1,7 @@
 using NorthWind.Membership.Backend.Core.Interfaces.Common;
 using NorthWind.Membership.Backend.Core.Interfaces.UserRegistration;
 using NorthWind.Membership.Entities.DTOs.UserRegistration;
-using NorthWind.Result.Entities;
 using NorthWind.Validation.Entities.Interfaces;
-using NorthWind.Validation.Entities.ValueObjects;
 
 namespace NorthWind.Membership.Backend.Core.UseCases;
 

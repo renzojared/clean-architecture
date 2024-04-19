@@ -1,6 +1,5 @@
 using NorthWind.Membership.Backend.Core.Interfaces.UserRegistration;
 using NorthWind.Membership.Entities.DTOs.UserRegistration;
-using NorthWind.Membership.Entities.ValueObjects;
 
 namespace Microsoft.AspNetCore.Builder;
 

@@ -10,6 +10,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="7.5.1" />
       <PackageReference Include="NorthWind.Membership.Entities" Version="1.0.0" />
       <PackageReference Include="NorthWind.Result.Entities" Version="1.0.0" />
     </ItemGroup>
@@ -19,6 +20,10 @@
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>UserRegistrationMessages.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="Resources\UserLoginMessages.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>UserLoginMessages.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
@@ -26,6 +31,11 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>UserRegistrationMessages.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\UserLoginMessages.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>UserLoginMessages.resx</DependentUpon>
       </Compile>
     </ItemGroup>
 </Project>

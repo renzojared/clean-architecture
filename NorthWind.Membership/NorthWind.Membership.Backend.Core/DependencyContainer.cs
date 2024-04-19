@@ -1,3 +1,4 @@
+using NorthWind.Membership.Backend.Core.Interfaces.UserLogin;
 using NorthWind.Membership.Backend.Core.Interfaces.UserRegistration;
 using NorthWind.Membership.Backend.Core.Presenters.UserRegistration;
 using NorthWind.Membership.Backend.Core.UseCases;
@@ -13,6 +14,9 @@ public static class DependencyContainer
 
         services.AddScoped<IUserRegistrationInputPort, UserRegistrationInteractor>();
         services.AddScoped<IUserRegistrationOutputPort, UserRegistrationPresenter>();
+        
+        services.AddScoped<IUserLoginInputPort, UserLoginInteractor>();
+        
 
         return services;
     }

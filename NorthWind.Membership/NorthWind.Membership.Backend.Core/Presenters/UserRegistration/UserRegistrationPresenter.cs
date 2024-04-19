@@ -1,9 +1,4 @@
-using Microsoft.AspNetCore.Http;
-using NorthWind.Membership.Backend.Core.Extensions;
 using NorthWind.Membership.Backend.Core.Interfaces.UserRegistration;
-using NorthWind.Membership.Backend.Core.Resources;
-using NorthWind.Result.Entities;
-using NorthWind.Validation.Entities.ValueObjects;
 
 namespace NorthWind.Membership.Backend.Core.Presenters.UserRegistration;
 
