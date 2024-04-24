@@ -1,8 +1,3 @@
-using NorthWind.Membership.Backend.Core.Interfaces.Common;
-using NorthWind.Membership.Backend.Core.Interfaces.UserRegistration;
-using NorthWind.Membership.Entities.DTOs.UserRegistration;
-using NorthWind.Validation.Entities.Interfaces;
-
 namespace NorthWind.Membership.Backend.Core.UseCases;
 
 internal class UserRegistrationInteractor(

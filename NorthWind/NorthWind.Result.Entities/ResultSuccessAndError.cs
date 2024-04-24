@@ -5,7 +5,7 @@ public class Result<SuccessResultType, ErrorResultType> : Result<ErrorResultType
     public SuccessResultType SuccessValue { get; private set; }
 
     public Result(SuccessResultType successValue) : base()
-        => successValue = SuccessValue;
+        => SuccessValue = successValue;
 
     public Result(ErrorResultType errorValue) : base(errorValue)
     {

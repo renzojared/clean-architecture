@@ -1,4 +1,8 @@
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using NorthWind.Membership.Backend.AspNetIdentity.Options;
+using NorthWind.Membership.Backend.Core.Options;
 using NorthWind.Sales.Backend.DataContexts.EFCore.Options;
 using NorthWind.Sales.Backend.SmtpGateways.Options;
 
@@ -17,7 +21,9 @@ internal static class Startup
             smtpOptions
                 => builder.Configuration.GetSection(SmtpOptions.SectionKey).Bind(smtpOptions),
             membershipDbOptions
-                => builder.Configuration.GetSection(MembershipDbOptions.SectionKey).Bind(membershipDbOptions));
+                => builder.Configuration.GetSection(MembershipDbOptions.SectionKey).Bind(membershipDbOptions),
+            jwtOptions
+                => builder.Configuration.GetSection(JwtOptions.SectionKey).Bind(jwtOptions));
 
         builder.Services.AddCors(options => options.AddDefaultPolicy(config =>
         {
@@ -26,6 +32,18 @@ internal static class Startup
             config.AllowAnyOrigin();
         }));
 
+        builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options =>
+            {
+                builder.Configuration.GetSection(JwtOptions.SectionKey).Bind(options.TokenValidationParameters);
+                var securityKey =
+                    builder.Configuration.GetSection(JwtOptions.SectionKey)[nameof(JwtOptions.SecurityKey)];
+                var securityKeyBytes = Encoding.UTF8.GetBytes(securityKey);
+                options.TokenValidationParameters.IssuerSigningKey = new SymmetricSecurityKey(securityKeyBytes);
+            });
+
+        builder.Services.AddAuthorization();
+        
         return builder.Build();
     }
 
@@ -41,6 +59,8 @@ internal static class Startup
 
         app.MapNorthWindSalesEndpoints();
         app.UseCors();
+        app.UseAuthentication();
+        app.UseAuthorization();
 
         return app;
     }

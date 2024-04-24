@@ -1,8 +1,3 @@
-using Microsoft.AspNetCore.Identity;
-using NorthWind.Membership.Backend.AspNetIdentity.Resources;
-using NorthWind.Membership.Entities.DTOs.UserRegistration;
-using NorthWind.Validation.Entities.ValueObjects;
-
 namespace NorthWind.Membership.Backend.AspNetIdentity.Services;
 
 internal static class ErrorMessagesMapper

@@ -1,5 +1,3 @@
-using Microsoft.AspNetCore.Mvc;
-
 namespace NorthWind.Membership.Backend.Core.Extensions;
 
 internal static class ValidationErrorsExtensions

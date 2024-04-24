@@ -1,6 +1,3 @@
-using NorthWind.Membership.Backend.Core.Interfaces.UserRegistration;
-using NorthWind.Membership.Entities.DTOs.UserRegistration;
-
 namespace Microsoft.AspNetCore.Builder;
 
 internal static class UserRegistrationController

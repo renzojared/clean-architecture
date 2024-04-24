@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using NorthWind.HttpDelegatingHandlers;
+using NorthWind.Membership.Frontend.RazorViews.ViewModels.UserLogin;
 using NorthWind.Membership.Frontend.RazorViews.ViewModels.UserRegistration;
 using NorthWind.Membership.Frontend.RazorViews.WebApiGateways;
 
@@ -17,6 +18,9 @@ public static class DependencyContainer
         services.AddMembershipValidators();
         services.AddModelValidator<UserRegistrationViewModel, UserRegistrationViewModelDtoValidator>();
         services.AddModelValidator<UserRegistrationViewModel, UserRegistrationViewModelValidator>();
+
+        services.AddScoped<UserLoginViewModel>();
+        services.AddModelValidator<UserLoginViewModel, UserLoginViewModelDtoValidator>();
 
         return services;
     }

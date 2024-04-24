@@ -1,3 +1,6 @@
 namespace NorthWind.Membership.Entities.DTOs.UserLogin;
 
-public record TokensDto(string AccessToken);
+public class TokensDto(string accessToken)
+{
+    public string AccessToken => accessToken;
+};

@@ -1,6 +1,3 @@
-using NorthWind.Membership.Backend.Core.Interfaces.UserLogin;
-using NorthWind.Membership.Entities.DTOs.UserLogin;
-
 namespace Microsoft.AspNetCore.Builder;
 
 internal static class UserLoginController

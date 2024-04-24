@@ -2,7 +2,6 @@
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
@@ -32,6 +31,10 @@
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>CommonMessages.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Update="Resources\UserLoginMessages.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>UserLoginMessages.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
     </ItemGroup>
 
     <ItemGroup>
@@ -44,6 +47,11 @@
         <DesignTime>True</DesignTime>
         <AutoGen>True</AutoGen>
         <DependentUpon>CommonMessages.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Resources\UserLoginMessages.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>UserLoginMessages.resx</DependentUpon>
       </Compile>
     </ItemGroup>
 

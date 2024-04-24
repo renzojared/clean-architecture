@@ -1,3 +1,8 @@
 namespace NorthWind.Membership.Backend.Core.Dtos;
 
-public record UserDto(string Email, string FirstName, string LastName);
+public class UserDto(string email, string firstName, string lastName)
+{
+    public string Email => email;
+    public string FirstName => firstName;
+    public string LastName => lastName;
+}

@@ -1,0 +1,29 @@
+<EditForm Model="ViewModel"
+          OnValidSubmit="ViewModel.Login">
+    <ModelValidator Validator="ViewModel.Validator"
+                    @ref="ViewModel.ModelValidatorComponentReference"/>
+    <div class="form-group">
+        <label for="Email">@CommonMessages.EmailLabel</label>
+        <InputText id="Email"
+                   class="form-control"
+                   placeholder="@CommonMessages.EmailLabel"
+                   @bind-Value="ViewModel.Email"/>
+        <ValidationMessage For="()=> ViewModel.Email"/>
+    </div>
+    <div class="form-group">
+        <label for="Password">@CommonMessages.PasswordLabel</label>
+        <InputText id="Password"
+                   class="form-control"
+                   placeholder="@CommonMessages.PasswordLabel"
+                   type="password"
+                   @bind-Value="ViewModel.Password"/>
+        <ValidationMessage For="()=> ViewModel.Password"/>
+    </div>
+    <div class="row p-3">
+        <div class="col">
+            <button class="btn btn-primary">
+                @UserLoginMessages.LoginButtonText
+            </button>
+        </div>
+    </div>
+</EditForm>

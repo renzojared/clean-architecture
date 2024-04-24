@@ -1,6 +1,3 @@
-using Microsoft.EntityFrameworkCore.Design;
-using NorthWind.Membership.Backend.AspNetIdentity.Options;
-
 namespace NorthWind.Membership.Backend.AspNetIdentity.DataContexts;
 
 internal class NorthWindMembershipContextFactory : IDesignTimeDbContextFactory<NorthWindMembershipContext>
