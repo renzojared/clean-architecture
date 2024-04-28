@@ -5,6 +5,7 @@ using NorthWind.Membership.Backend.AspNetIdentity.Options;
 using NorthWind.Membership.Backend.Core.Options;
 using NorthWind.Sales.Backend.DataContexts.EFCore.Options;
 using NorthWind.Sales.Backend.SmtpGateways.Options;
+using NorthWind.Sales.WebApi.Extensions;
 
 namespace NorthWind.Sales.WebApi;
 
@@ -13,7 +14,7 @@ internal static class Startup
     public static WebApplication CreateWebApplication(this WebApplicationBuilder builder)
     {
         builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
+        builder.Services.AddSwaggerGenBearer();
 
         builder.Services.AddNorthWindSalesServices(
             dbOptions

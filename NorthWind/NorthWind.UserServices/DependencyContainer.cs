@@ -8,7 +8,7 @@ public static class DependencyContainer
     public static IServiceCollection AddUserServices(this IServiceCollection services)
     {
         services.AddHttpContextAccessor();
-        services.AddSingleton<IUserService, UserServiceFake>();
+        services.AddSingleton<IUserService, UserService>();
         return services;
     }
 }

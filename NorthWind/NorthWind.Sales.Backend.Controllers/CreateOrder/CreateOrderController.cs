@@ -13,7 +13,8 @@ public static class CreateOrderController
     {
         app.MapPost(Endpoints.CreateOrder, CreateOrder)
             .ProducesValidationProblem()
-            .ProducesProblem(StatusCodes.Status500InternalServerError); //Review
+            .ProducesProblem(StatusCodes.Status500InternalServerError) //Review
+            .RequireAuthorization();
 
         return app;
     }
