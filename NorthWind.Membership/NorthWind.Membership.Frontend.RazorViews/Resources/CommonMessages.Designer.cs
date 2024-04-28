@@ -62,5 +62,23 @@ namespace NorthWind.Membership.Frontend.RazorViews.Resources {
                 return ResourceManager.GetString("PasswordLabel", resourceCulture);
             }
         }
+        
+        internal static string CreateAccountText {
+            get {
+                return ResourceManager.GetString("CreateAccountText", resourceCulture);
+            }
+        }
+        
+        internal static string LoginText {
+            get {
+                return ResourceManager.GetString("LoginText", resourceCulture);
+            }
+        }
+        
+        internal static string CloseSessionText {
+            get {
+                return ResourceManager.GetString("CloseSessionText", resourceCulture);
+            }
+        }
     }
 }

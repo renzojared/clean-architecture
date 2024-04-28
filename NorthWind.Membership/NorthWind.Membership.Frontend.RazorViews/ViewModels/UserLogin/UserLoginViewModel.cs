@@ -1,4 +1,5 @@
 using NorthWind.Membership.Entities.DTOs.UserLogin;
+using NorthWind.Membership.Frontend.RazorViews.AuthenticationStateProviders;
 using NorthWind.Membership.Frontend.RazorViews.WebApiGateways;
 using NorthWind.RazorComponents.Validators;
 using NorthWind.Validation.Entities.Interfaces;
@@ -7,7 +8,8 @@ using NorthWind.Validation.Entities.ValueObjects;
 namespace NorthWind.Membership.Frontend.RazorViews.ViewModels.UserLogin;
 
 public class UserLoginViewModel(MembershipGateway gateway,
-    IModelValidatorHub<UserLoginViewModel> validator)
+    IModelValidatorHub<UserLoginViewModel> validator,
+    JwtAuthenticationStateProvider authenticationStateProvider)
 {
     public IModelValidatorHub<UserLoginViewModel> Validator => validator;
     public ModelValidator<UserLoginViewModel> ModelValidatorComponentReference { get; set; }
@@ -20,7 +22,7 @@ public class UserLoginViewModel(MembershipGateway gateway,
         try
         {
             var tokens = await gateway.LoginAsync((UserCredentialsDto)this);
-            Console.WriteLine(tokens);
+            await authenticationStateProvider.LoginAsync(tokens);
 
             OnLogin?.Invoke();
         }

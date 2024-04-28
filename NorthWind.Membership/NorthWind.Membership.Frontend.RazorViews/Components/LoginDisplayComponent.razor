@@ -1,0 +1,16 @@
+<AuthorizeView>
+    <Authorized>
+        @GetUserName(context)
+        <a href="/user/logout">
+            @CommonMessages.CloseSessionText
+        </a>
+    </Authorized>
+    <NotAuthorized>
+        <a href="/user/register">
+            @CommonMessages.CreateAccountText
+        </a>
+        <a href="/user/login">
+            @CommonMessages.LoginText
+        </a>
+    </NotAuthorized>
+</AuthorizeView>

@@ -11,8 +11,10 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Components.Authorization" Version="8.0.4" />
         <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.2"/>
         <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+        <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="7.5.1" />
         <PackageReference Include="NorthWind.HttpDelegatingHandlers" Version="1.0.0" />
         <PackageReference Include="NorthWind.Membership.Entities" Version="1.0.0" />
         <PackageReference Include="NorthWind.RazorComponents" Version="1.0.0" />

@@ -50,5 +50,11 @@ namespace NorthWind.Membership.Frontend.RazorViews.Resources {
                 return ResourceManager.GetString("LoginButtonText", resourceCulture);
             }
         }
+        
+        internal static string LogoutButtonText {
+            get {
+                return ResourceManager.GetString("LogoutButtonText", resourceCulture);
+            }
+        }
     }
 }

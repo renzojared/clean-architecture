@@ -27,4 +27,13 @@
     <data name="PasswordLabel" xml:space="preserve">
         <value>Contraseña</value>
     </data>
+    <data name="CreateAccountText" xml:space="preserve">
+        <value>Crear cuenta</value>
+    </data>
+    <data name="LoginText" xml:space="preserve">
+        <value>Iniciar sesión</value>
+    </data>
+    <data name="CloseSessionText" xml:space="preserve">
+        <value>Cerrar sesión</value>
+    </data>
 </root>

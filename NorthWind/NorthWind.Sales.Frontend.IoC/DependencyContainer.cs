@@ -6,10 +6,11 @@ public static class DependencyContainer
 {
     public static IServiceCollection AddNorthWindSalesServices
     (this IServiceCollection services, Action<HttpClient> configureHttpClient,
-        Action<HttpClient> configureMembershipHttpClient)
+        Action<HttpClient> configureMembershipHttpClient,
+        Action<IHttpClientBuilder> configureHttpClientBuilder)
     {
         services
-            .AddWebApiGateways(configureHttpClient)
+            .AddWebApiGateways(configureHttpClient, configureHttpClientBuilder)
             .AddViewsServices()
             .AddValidators()
             .AddValidationService()

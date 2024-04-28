@@ -13,8 +13,4 @@
       <ProjectReference Include="..\NorthWind.ValidationService.FluentValidation\NorthWind.ValidationService.FluentValidation.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <PackageReference Include="NorthWind.Membership.Frontend.RazorViews" Version="1.0.0" />
-    </ItemGroup>
-
 </Project>
