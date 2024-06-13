@@ -10,7 +10,7 @@ public class NorthWindDomainLogsContextFactory : IDesignTimeDbContextFactory<Nor
             new DBOptions
             {
                 DomainLogsConnectionString =
-                    "Server=localhost;Database=NorthWindLogsDB;User Id=sa;Password=D@cker09;TrustServerCertificate=True;Encrypt=False;"
+                    "Server=localhost,55002;Database=NorthWindLogsDB;User Id=sa;Password=D@cker09;TrustServerCertificate=True;Encrypt=False;"
             });
 
         return new NorthWindDomainLogsContext(dbOptions);
